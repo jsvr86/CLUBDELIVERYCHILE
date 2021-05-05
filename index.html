@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <title>CLUB DELIVERY CHILE | Un lugar pensado para Delivery</title>
 </head>
 <body>
@@ -37,33 +38,52 @@
     
     <main>
         <div>
-            <img src="img/banner_1.png" alt="" width="100%" height="auto">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/banner_1.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/banner_2.png" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
         </div>
         <article>
             <h1 class="titulo">CLUB DELIVERY CHILE</h1>
             <p class="parrafo">Club Delivery es un espacio único y exclusivo de trabajo compartido, unas oficinas para ti, un lugar al que llegar, cada día. Creado sólo para los trabajadores del rubro Delivery. Sin distinción de Género ni nacionalidad ¿a quién le importa realmente eso? A nosotros no. Club Delivery nace de la necesidad de generar colaboración con el rubro del Delivery, porque todos recibimos en nuestros hogares y lugares de trabajo todo aquello que queremos o necesitamos en el momento preciso. Club Delivery nace del crecimiento, de la pandemia, del curso de la vida, que nos ha puesto aquí con miles de personas trabajando para todes nosotres.</p>
         </article>
         <br>
-        <div class="contendorInstalaciones">
-            <div class="instalaciones">
-                <img class="instalaciones__imagen" src="img/saladejuegos.jpg" alt="Sala de Juegos" width="100%" height="auto">
-                <h2 class="instalaciones__subtitulo" >SALA DE JUEGOS</h2>
-                <p class="instalaciones__texto">Tómate una distracción necesaria y disfruta de nuestras maquinas arcade.</p>
-            </div>
-            <div class="instalaciones">
-                <img class="instalaciones__imagen" src="img/saladedescanso.jpg" alt="Sala de Descanso" width="100%" height="auto">
-                <h2 class="instalaciones__subtitulo" >SALA DE DESCANSO</h2>
-                <p class="instalaciones__texto">Descansa y recupera energías para tu largo día de trabajo</p>
-            </div>
-            <div class="instalaciones">
-                <img class="instalaciones__imagen" src="img/terraza.jpg" alt="Terraza" width="100%" height="auto">
-                <h2 class="instalaciones__subtitulo" >ZONA DE TERRAZAS</h2>
-                <p class="instalaciones__texto">Para todas tus necesidades, pensado para los que nunca paran.</p>
-            </div>
-            <div class="instalaciones">
-                <img class="instalaciones__imagen" src="img/snack.jpg" alt="Zona de Snack" width="100%" height="auto">
-                <h2 class="instalaciones__subtitulo" >ZONA DE SNACK</h2>
-                <p class="instalaciones__texto">Si te quedas sin energía comprate algo en nuestro estación de snack.</p>
+        <div class="container">
+            <div class="contendorInstalaciones row">
+                <div class="instalaciones col-sm-12 col-md-6 col-lg-3">
+                    <img class="instalaciones__imagen" src="img/saladejuegos.jpg" alt="Sala de Juegos" width="100%" height="auto">
+                    <h2 class="instalaciones__subtitulo" >SALA DE JUEGOS</h2>
+                    <p class="instalaciones__texto">Tómate una distracción necesaria y disfruta de nuestras maquinas arcade.</p>
+                </div>
+                <div class="instalaciones col-sm-12 col-md-6 col-lg-3">
+                    <img class="instalaciones__imagen" src="img/saladedescanso.jpg" alt="Sala de Descanso" width="100%" height="auto">
+                    <h2 class="instalaciones__subtitulo" >SALA DE DESCANSO</h2>
+                    <p class="instalaciones__texto">Descansa y recupera energías para tu largo día de trabajo</p>
+                </div>
+                <div class="instalaciones col-sm-12 col-md-6 col-lg-3">
+                    <img class="instalaciones__imagen" src="img/terraza.jpg" alt="Terraza" width="100%" height="auto">
+                    <h2 class="instalaciones__subtitulo" >ZONA DE TERRAZAS</h2>
+                    <p class="instalaciones__texto">Para todas tus necesidades, pensado para los que nunca paran.</p>
+                </div>
+                <div class="instalaciones col-sm-12 col-md-6 col-lg-3">
+                    <img class="instalaciones__imagen" src="img/snack.jpg" alt="Zona de Snack" width="100%" height="auto">
+                    <h2 class="instalaciones__subtitulo" >ZONA DE SNACK</h2>
+                    <p class="instalaciones__texto">Si te quedas sin energía comprate algo en nuestro estación de snack.</p>
+                </div>
             </div>
         </div>
 
@@ -82,6 +102,10 @@
             <img class="footer__imagenredes" src="img/instagram.svg" alt="Instagram" height="50px">
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
 
 </body>

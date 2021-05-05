@@ -29,15 +29,16 @@ $texto-size: 18px;
 body{
     padding-left: 10px;
     padding-right: 10px;
-    background-color: black;
+    background-color: black !important; 
 }
 .nav{
-    display: grid;
+    display: grid !important;
     grid-template-columns: 10% 90%;
     &__ul{
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        list-style: none;
         }
         &__link{
             font-family: "roboto condensed";
@@ -48,6 +49,7 @@ body{
 }
 article{
     background-color: rgb(37, 37, 37);
+    padding: 10px;
         .titulo{
             @extend .extensionTitulo;
         }
@@ -97,14 +99,13 @@ section{
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 50% 50%;
     &__foto{
-        border: solid rgb(37, 37, 37);
-        border-radius: 20px;
     }
 }
 .contendorInstalaciones{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 100%;
+    padding: 20px;
 }
 .instalaciones{
     padding-left: 5px;
@@ -128,10 +129,9 @@ section{
 .footer{
     background-color: rgb(37, 37, 37);
     display: grid;
-    grid-template-columns: 10% 80% 10%;
+    grid-template-columns: 20% 40% 40%;
     grid-template-rows: 100%;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 20px;
     place-content: center;
     &__contenedortitulo{
         color: white;
@@ -163,6 +163,9 @@ label{
     &__dos{
         display: flex;
     }
+    &__h2{
+        @extend .extensionTitulo;
+    }
 }
 .boton{
     
@@ -178,6 +181,7 @@ label{
         }
         &__link:hover{
             background-color: rgb(27, 27, 27);
+            padding-bottom: 20px;
         }
 }
 .tabla{
@@ -185,6 +189,7 @@ label{
     height: auto;
     background-color: rgb(27, 27, 27);
     width: 100%;
+    padding: 20px;
     &__estilo{
         background-color: rgb(41, 41, 41);
         margin: auto;  
@@ -216,6 +221,7 @@ label{
 }
 
 #encabezadoSeo{
+    padding: 20px;
     h1{
         @extend .extensionTitulo;
     }

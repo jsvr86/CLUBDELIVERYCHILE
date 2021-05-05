@@ -1,4 +1,4 @@
-.extensionTitulo, article .titulo, #encabezadoSeo h1 {
+.extensionTitulo, article .titulo, .valor__h2, #encabezadoSeo h1 {
   font-family: "anton";
   font-size: 36px;
   color: white;
@@ -13,15 +13,16 @@
 body {
   padding-left: 10px;
   padding-right: 10px;
-  background-color: black; }
+  background-color: black !important; }
 
 .nav {
-  display: grid;
+  display: grid !important;
   grid-template-columns: 10% 90%; }
   .nav__ul {
     display: flex;
     align-items: center;
-    justify-content: space-evenly; }
+    justify-content: space-evenly;
+    list-style: none; }
   .nav__link {
     font-family: "roboto condensed";
     color: white;
@@ -29,7 +30,8 @@ body {
     text-decoration: none; }
 
 article {
-  background-color: #252525; }
+  background-color: #252525;
+  padding: 10px; }
   article h2 {
     font-family: "roboto condensed";
     font-size: 24px;
@@ -65,14 +67,12 @@ section p {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 50% 50%; }
-  .galeria__foto {
-    border: solid #252525;
-    border-radius: 20px; }
 
 .contendorInstalaciones {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 100%; }
+  grid-template-rows: 100%;
+  padding: 20px; }
 
 .instalaciones {
   padding-left: 5px;
@@ -91,10 +91,9 @@ section p {
 .footer {
   background-color: #252525;
   display: grid;
-  grid-template-columns: 10% 80% 10%;
+  grid-template-columns: 20% 40% 40%;
   grid-template-rows: 100%;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding: 20px;
   place-content: center; }
   .footer__contenedortitulo {
     color: white;
@@ -132,13 +131,15 @@ label {
   border: 2px solid #272727; }
 
 .boton__link:hover {
-  background-color: #1b1b1b; }
+  background-color: #1b1b1b;
+  padding-bottom: 20px; }
 
 .tabla {
   place-content: center;
   height: auto;
   background-color: #1b1b1b;
-  width: 100%; }
+  width: 100%;
+  padding: 20px; }
   .tabla__estilo {
     background-color: #292929;
     margin: auto; }
@@ -162,3 +163,6 @@ label {
     font-family: "roboto condensed";
     padding: 5px;
     border: 1px solid white; }
+
+#encabezadoSeo {
+  padding: 20px; }
