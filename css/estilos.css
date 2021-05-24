@@ -1,82 +1,89 @@
-.extensionTitulo, article .titulo, .valor__h2, #encabezadoSeo h1 {
-  font-family: "anton";
+.extensionTitulo, .titulo {
+  font-family: "Anton";
   font-size: 36px;
   color: white;
-  text-align: center; }
+  text-align: center;
+  padding-top: 20px; }
 
-.extensionParrafo, article .parrafo, #encabezadoSeo p {
+.extensionParrafo, .parrafo {
   font-family: "Roboto condensed";
   color: white;
   text-align: center;
   font-size: 18px; }
 
 body {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 0;
   background-color: black !important; }
 
-.nav {
-  display: grid !important;
-  grid-template-columns: 10% 90%; }
-  .nav__ul {
+nav {
+  height: 100px;
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  nav .logo {
+    padding-left: 30px; }
+  nav .menu_items {
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    list-style: none; }
-  .nav__link {
+    list-style: none;
+    margin-right: 30px; }
+    nav .menu_items li {
+      border-radius: 3px;
+      margin: 0 5px; }
+      nav .menu_items li a {
+        padding: 7px 13px;
+        text-decoration: none;
+        font-size: 18px;
+        font-family: "roboto condensed";
+        display: block;
+        color: white; }
+    nav .menu_items li:hover {
+      background-color: #202020;
+      transition: .4s; }
+  nav span {
+    margin-right: 30px;
+    font-size: 25px;
+    color: white;
     font-family: "roboto condensed";
-    color: white;
-    font-size: 18px;
-    text-decoration: none; }
+    cursor: pointer;
+    display: none; }
+  nav .menu_items.show {
+    top: 75px; }
 
-article {
-  background-color: #252525;
-  padding: 10px; }
-  article h2 {
-    font-family: "roboto condensed";
-    font-size: 24px;
-    color: white;
-    text-align: center; }
-
-section div {
-  padding: 10px; }
-  section div h1 {
-    font-family: "roboto condensed";
-    font-size: 36px;
-    color: white;
-    text-align: center; }
-  section div .mix {
-    font-family: "Roboto condensed";
-    color: white;
-    text-align: center; }
-
-section p {
-  font-family: "roboto condensed";
-  font-size: 18px;
-  color: white;
-  text-align: center; }
-
-.nosotros {
-  display: flex; }
-  .nosotros__vision {
-    background-color: #292929; }
-  .nosotros__mision {
-    background-color: #1a1a1a; }
-
-.galeria {
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 50% 50%; }
-
-.contendorInstalaciones {
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 100%;
-  padding: 20px; }
+@media screen and (max-width: 900px) {
+  nav {
+    height: 90px; }
+    nav span {
+      display: inline-flex; }
+    nav .menu_items {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background-color: black;
+      top: -100vh;
+      text-align: center;
+      transition: all .4s;
+      flex-direction: column; }
+      nav .menu_items li {
+        margin: 10px 0 10px 0;
+        line-height: 10px; }
+        nav .menu_items li a {
+          font-size: 20px;
+          font-family: "roboto condensed";
+          color: white;
+          font-weight: bold; }
+        nav .menu_items li a:hover {
+          color: #c2c2c2; }
+      nav .menu_items li:hover {
+        background: none; }
+  span {
+    padding: 35px; } }
 
 .instalaciones {
-  padding-left: 5px;
-  padding-right: 5px; }
+  background-color: #252525;
+  border: 5px solid black;
+  border-radius: 10px; }
   .instalaciones__subtitulo {
     font-family: "roboto condensed";
     font-size: 24px;
@@ -88,41 +95,9 @@ section p {
     color: white;
     text-align: center; }
 
-.footer {
-  background-color: #252525;
-  display: grid;
-  grid-template-columns: 20% 40% 40%;
-  grid-template-rows: 100%;
-  padding: 20px;
-  place-content: center; }
-  .footer__contenedortitulo {
-    color: white;
-    font-family: "roboto condensed";
-    font-size: 20px; }
-  .footer__contenedordireccion {
-    font-family: "roboto condensed";
-    font-size: 16px;
-    color: white; }
-  .footer__redes {
-    font-family: "roboto condensed";
-    font-size: 20px;
-    color: white; }
-
-label {
-  color: white; }
-
-.valor {
-  display: flex;
-  background-color: #1b1b1b; }
-  .valor__uno {
-    display: flex;
-    background-color: #141414; }
-  .valor__dos {
-    display: flex; }
-
 .boton__link {
   text-decoration: none;
-  padding: 10px;
+  padding: 5px;
   font-family: "anton";
   font-size: 16px;
   color: #ffffff;
@@ -132,37 +107,86 @@ label {
 
 .boton__link:hover {
   background-color: #1b1b1b;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  color: white; }
 
 .tabla {
-  place-content: center;
-  height: auto;
-  background-color: #1b1b1b;
-  width: 100%;
   padding: 20px; }
-  .tabla__estilo {
-    background-color: #292929;
-    margin: auto; }
-  .tabla__titular {
-    font-family: "anton";
-    font-size: 30px;
+  .tabla th {
+    background-color: #4AFF91;
+    font-family: "roboto condensed";
+    text-align: center; }
+  .tabla td {
+    font-family: "roboto condensed";
+    text-align: center; }
+  .tabla .precio {
+    background-color: red; }
+  .tabla #presentacion {
+    background-color: #272727;
+    padding: 20px;
+    max-width: 100%; }
+  .tabla #planMensual {
+    background-color: #AEFF45; }
+  .tabla #planParejas {
+    background-color: #FFD245; }
+  .tabla #planEllas {
+    background-color: #FE0098; }
+  .tabla #loQuiero {
+    background-color: #0b7685; }
+  .tabla #loQuiero:hover {
+    background-color: #05383f; }
+  .tabla a {
+    font-size: 18px;
+    font-family: "roboto condensed";
+    color: white;
+    text-decoration: none; }
+  .tabla a:hover {
+    color: white;
+    text-decoration: none; }
+
+.instalacionesTexto {
+  padding: 20px; }
+  .instalacionesTexto h2 {
+    font-size: 24px;
+    color: white;
+    font-family: "roboto condensed"; }
+  .instalacionesTexto p {
+    font-size: 18px;
+    color: white;
+    font-family: "roboto condensed"; }
+
+div {
+  padding: 10px; }
+
+.contactoTexto {
+  background-color: #181818;
+  padding: 5px;
+  border: 5px solid black;
+  border-radius: 3px; }
+  .contactoTexto h2 {
+    font-family: "roboto condensed";
+    font-size: 24px;
     color: white;
     text-align: center; }
-
-.contenido {
-  place-content: center;
-  align-items: center;
-  justify-content: center; }
-  .contenido__cabecera {
-    color: black;
-    font-family: "anton";
-    font-size: 20px;
-    background-color: chartreuse; }
-  .contenido__texto {
-    color: white;
+  .contactoTexto p {
     font-family: "roboto condensed";
-    padding: 5px;
-    border: 1px solid white; }
+    font-size: 18px;
+    color: white;
+    text-align: center; }
+  .contactoTexto a {
+    text-decoration: none; }
 
-#encabezadoSeo {
-  padding: 20px; }
+.contactoTexto:hover {
+  background-color: #2e2e2e;
+  transition: .4s; }
+
+footer {
+  background-color: #1b1b1b; }
+  footer .tituloFooter {
+    font-size: 24px;
+    color: white;
+    font-family: "Roboto condensed"; }
+  footer .parrafoFooter {
+    font-size: 18px;
+    color: white;
+    font-family: "Roboto condensed"; }

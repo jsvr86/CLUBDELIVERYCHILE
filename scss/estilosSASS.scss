@@ -1,5 +1,5 @@
 
-$titulo: "anton";
+$titulo: "Anton";
 $text: "Roboto condensed";
 $color: white;
 $ali-text: center;
@@ -11,6 +11,7 @@ $texto-size: 18px;
     font-size: $titulo-size;
     color: $color;
     text-align: $ali-text;
+    padding-top: 20px;
 }
 
 .extensionParrafo{
@@ -26,93 +27,104 @@ $texto-size: 18px;
 
 }
 
+
 body{
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0;
     background-color: black !important; 
 }
-.nav{
-    display: grid !important;
-    grid-template-columns: 10% 90%;
-    &__ul{
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        list-style: none;
-        }
-        &__link{
-            font-family: "roboto condensed";
-            color: white;
-            font-size: 18px;
-            text-decoration: none;
-        }
-}
-article{
-    background-color: rgb(37, 37, 37);
-    padding: 10px;
-        .titulo{
-            @extend .extensionTitulo;
-        }
-        
-        h2{
-            font-family: "roboto condensed";
-            font-size: 24px;
-            color: white;
-            text-align: center;   
-        }
-        .parrafo{
-            @extend .extensionParrafo;
-        }
-}
-section{
-    div{
-        padding: 10px;
-        h1{
-            font-family: "roboto condensed";
-            font-size: 36px;
-            color: white;
-            text-align: center;
-        }
-        .mix{
-            @include fuenteh2(24px);
-        }
-        }
-        p{
-            font-family: "roboto condensed";
-            font-size: 18px;
-            color: white;
-            text-align: center;
-        }
-    }
 
-.nosotros{
+nav{
+    height: 100px;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
     display: flex;
-    &__vision{
-        background-color: rgb(41, 41, 41);
+    justify-content: space-between;
+    align-items: center;
+    .logo{
+        padding-left: 30px;
     }
-    &__mision{
-        background-color: rgb(26, 26, 26);
-    }
-}
-.galeria{
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 50% 50%;
-    &__foto{
-    }
-}
-.contendorInstalaciones{
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 100%;
-    padding: 20px;
-}
-.instalaciones{
-    padding-left: 5px;
-    padding-right: 5px;
-        &__imagen{
-
+    .menu_items{
+        display: flex;
+        list-style: none;
+        margin-right: 30px;
+        
+        li{
+            border-radius: 3px;
+            margin: 0 5px;
+            
+            a{
+                padding: 7px 13px;
+                text-decoration: none;
+                font-size: 18px;
+                font-family: "roboto condensed";
+                display: block;
+                color: white;
+            }
         }
+        li:hover{
+            background-color: rgb(32, 32, 32);
+            transition: .4s;
+        }
+    }
+    span{
+        margin-right: 30px;
+        font-size: 25px;
+        color: white;
+        font-family: "roboto condensed";
+        cursor: pointer;
+        display: none;
+    }
+    .menu_items.show{
+        top: 75px
+    }
+}
+@media screen and (max-width: 900px){
+    nav{
+        height: 90px;
+        span{
+            display: inline-flex;
+        }
+        .menu_items{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            top: -100vh;
+            text-align: center;
+            transition: all .4s;
+            flex-direction: column;
+
+            li{
+                margin: 10px 0 10px 0;
+                line-height: 10px;
+
+                a{
+                    font-size: 20px;
+                    font-family: "roboto condensed";
+                    color: white;
+                    font-weight: bold;
+                }
+                a:hover{
+                    color: rgb(194, 194, 194);
+                }
+            }
+            li:hover{
+                background: none;
+            }
+        }
+    }
+    span{
+        padding: 35px;
+    }
+}
+.titulo{
+    @extend .extensionTitulo;}
+.parrafo{
+    @extend .extensionParrafo   }
+.instalaciones{
+    background-color: rgb(37, 37, 37);
+    border: 5px solid black;
+    border-radius: 10px;
         &__subtitulo{
         font-family: "roboto condensed";
         font-size: 24px;
@@ -126,52 +138,13 @@ section{
             text-align: center;
         }
 }
-.footer{
-    background-color: rgb(37, 37, 37);
-    display: grid;
-    grid-template-columns: 20% 40% 40%;
-    grid-template-rows: 100%;
-    padding: 20px;
-    place-content: center;
-    &__contenedortitulo{
-        color: white;
-        font-family: "roboto condensed";
-        font-size: 20px;
-    }
-    &__contenedordireccion{
-        font-family: "roboto condensed";
-        font-size: 16px;
-        color: white;
-    }
-    &__redes{
-        font-family: "roboto condensed";
-        font-size: 20px;
-        color: white;
-    }
-    
-}
-label{
-    color: white;
-}
-.valor{
-    display: flex;
-    background-color: rgb(27, 27, 27);
-    &__uno{
-        display: flex;
-        background-color: rgb(20, 20, 20);
-    }
-    &__dos{
-        display: flex;
-    }
-    &__h2{
-        @extend .extensionTitulo;
-    }
-}
+
+
 .boton{
     
         &__link{
             text-decoration: none;
-            padding: 10px;
+            padding: 5px;
             font-family: "anton";
             font-size: 16px;
             color: #ffffff;
@@ -182,50 +155,109 @@ label{
         &__link:hover{
             background-color: rgb(27, 27, 27);
             padding-bottom: 20px;
+            color: white;
         }
 }
+
 .tabla{
-    place-content: center;
-    height: auto;
-    background-color: rgb(27, 27, 27);
-    width: 100%;
     padding: 20px;
-    &__estilo{
-        background-color: rgb(41, 41, 41);
-        margin: auto;  
+
+    th{
+        background-color: #4AFF91;
+        font-family: "roboto condensed";
+        text-align: center;
     }
-    &__titular{
-        font-family: "anton";
-        font-size: 30px;
+    td{
+        font-family: "roboto condensed";
+        text-align: center;
+    }
+    .precio{
+        background-color: red;
+    }
+    #presentacion{
+        background-color: #272727;
+        padding: 20px;
+        max-width: 100%;
+    }
+    #planMensual{
+        background-color: #AEFF45;
+    }
+    #planParejas{
+        background-color: #FFD245;
+    }
+    #planEllas{
+        background-color: #FE0098;
+    }
+    #loQuiero{
+        background-color: #0b7685;
+    }
+    #loQuiero:hover{
+        background-color: #05383f;
+    }
+    a{
+        font-size: 18px;
+        font-family: "roboto condensed";
+        color: white;
+        text-decoration: none;
+    }
+    a:hover{
+        color: white;
+        text-decoration: none;
+    }
+}
+.instalacionesTexto{
+    padding: 20px;
+    h2{
+        font-size: 24px;
+        color: white;
+        font-family: "roboto condensed";
+    }
+    p{
+        font-size: 18px;
+        color: white;
+        font-family: "roboto condensed";
+    }
+}
+div{
+    padding: 10px;
+}
+.contactoTexto{
+    background-color: rgb(24, 24, 24);
+    padding: 5px;
+    border: 5px solid black;
+    border-radius: 3px;
+    h2{
+        font-family: "roboto condensed";
+        font-size: 24px;
+        color: white;
+        text-align: center; 
+    }
+    p{
+        font-family: "roboto condensed";
+        font-size: 18px;
         color: white;
         text-align: center;
     }
-}
-.contenido{
-    place-content: center;
-    align-items: center;
-    justify-content: center;
-    &__cabecera{
-        color: black;
-        font-family: "anton";
-        font-size: 20px;
-        background-color: chartreuse;
-
+    a{
+        text-decoration: none;
     }
-    &__texto{
+}
+.contactoTexto:hover{
+    background-color: rgb(46, 46, 46);
+    transition: .4s;
+}
+footer{
+    background-color: rgb(27, 27, 27);
+    .tituloFooter{
+        font-size: 24px;
         color: white;
-        font-family: "roboto condensed";
-        padding: 5px;
-        border: 1px solid white;
+        font-family: "Roboto condensed";
+    }
+    .parrafoFooter{
+        font-size: 18px;
+        color: white;
+        font-family: "Roboto condensed";
     }
 }
 
-#encabezadoSeo{
-    padding: 20px;
-    h1{
-        @extend .extensionTitulo;
-    }
-    p{
-        @extend .extensionParrafo;
-    }
-}
+
